@@ -10,7 +10,7 @@ ONNX 1.16.1、ONNX Runtime 1.20.1、onnxsim 0.4.36、RKNN Toolkit2 2.3.2。
 本项目验证的 LeRobot 上游 commit：`7e241bd630a3719a56157a497ce5d08f244784f1`。
 LeRobot 在仓库外单独安装，不复制到本仓库。
 
-RKNN Toolkit2 2.3.2 声明的 PyTorch 依赖范围与本环境的 2.10 不一致。本项目使用 `--no-deps` 保留已有训练环境，实际只走 **ONNX 导入 RKNN** 路径，并完成数值与闭环校验；这不表示其 PyTorch 导入器支持 2.10。
+RKNN Toolkit2 2.3.2 声明的 PyTorch 依赖范围与本环境的 2.10 不一致。本项目使用 `--no-deps` 保留已有训练环境，实际只走 **ONNX 导入 RKNN** 路径，并完成数值与闭环校验；这不表示其 PyTorch 导入器支持 2.10。此环境还将 NumPy 固定为 Toolkit2 所需的 1.26.4，覆盖该 LeRobot 版本声明的 NumPy>=2；已验证的是本文导出路径，训练及其他策略应使用各自独立环境。
 
 ## 1. 准备独立转换环境
 

@@ -10,3 +10,6 @@ numpy==1.26.4
 protobuf==4.25.4
 ruamel.yaml==0.18.10
 fast-histogram==0.14
+psutil==7.2.2
+scipy==1.17.1
+tqdm==4.67.3
