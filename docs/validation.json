@@ -1,0 +1,27 @@
+{
+  "description": "RK3588S NPU\u8dd1ACT",
+  "board": "RK3588S / Ubuntu 22.04 / Linux 5.10.66 / Python 3.10.12",
+  "runtime": "RKNNLite 2.3.2 / librknnrt 2.3.2 / RKNPU 0.9.8",
+  "samples": {
+    "requests": 60,
+    "successes": 60,
+    "inference_ms_mean": 27.546571800019137,
+    "xyz_max_abs_mm": 0.04222
+  },
+  "dual_camera_demo": {
+    "episodes": 3,
+    "successes": 3,
+    "steps_per_episode": 23,
+    "requests": 9,
+    "inference_ms_mean": 26.057324778068708,
+    "camera_resolution": [
+      640,
+      480
+    ],
+    "model_resolution": [
+      128,
+      128
+    ]
+  },
+  "scope": "fixed-position MuJoCo simulation; not random-position or physical-robot validation"
+}

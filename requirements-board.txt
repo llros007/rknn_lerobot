@@ -1,0 +1,3 @@
+numpy==1.26.4
+huggingface-hub>=0.27,<2
+# Install the matching official RKNNLite 2.3.2 aarch64 wheel separately.

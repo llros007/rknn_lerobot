@@ -1,0 +1,7 @@
+numpy==1.26.4
+gym-hil==0.1.14
+gymnasium==1.2.3
+mujoco==3.8.1
+pillow>=10,<13
+imageio[ffmpeg]>=2.34,<3
+huggingface-hub>=0.27,<2

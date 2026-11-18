@@ -1,0 +1,63 @@
+{
+  "policy": "act",
+  "source_checkpoint_step": 50000,
+  "checkpoint_sha256": "07794f21013b927b733988b9122f1df3b94eb2c797de1658a324d845745d6ef2",
+  "input_order": [
+    "observation.state",
+    "observation.images.front",
+    "observation.images.wrist"
+  ],
+  "input_shapes": {
+    "observation.state": [
+      1,
+      18
+    ],
+    "observation.images.front": [
+      1,
+      3,
+      128,
+      128
+    ],
+    "observation.images.wrist": [
+      1,
+      3,
+      128,
+      128
+    ]
+  },
+  "input_dtype": "float32",
+  "image_input": "RGB NCHW float32 in [0,1]; normalization is embedded; do not normalize twice",
+  "state_input": "physical state: 7 qpos + 7 qvel + gripper command + 3 TCP coordinates",
+  "output": {
+    "name": "action",
+    "shape": [
+      1,
+      50,
+      4
+    ],
+    "units": "XYZ delta meters; gripper in [0,2]"
+  },
+  "normalization_embedded": true,
+  "latent": "zero (deterministic inference)",
+  "chunk_size": 50,
+  "n_action_steps": 10,
+  "temporal_ensemble_coeff": null,
+  "simulation": {
+    "env": "gym_hil/PandaPickCube-v0",
+    "ee_step_size": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    }
+  },
+  "description": "RK3588S NPU\u8dd1ACT",
+  "model_repo": "allros/act-franka-rk3588s",
+  "model_revision": "bcd00b9d9081ddc18a739400241fd856064fa41c",
+  "rknn": {
+    "file": "rknn/act_franka_rk3588_fp16.rknn",
+    "sha256": "f0d4b8e7e2650b90cd53c4adfed33fb6ef5277627b401b8b020031f36f43a393",
+    "precision": "FP16",
+    "toolkit_version": "2.3.2",
+    "target": "rk3588"
+  }
+}

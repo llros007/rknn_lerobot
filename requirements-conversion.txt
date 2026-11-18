@@ -1,0 +1,12 @@
+# Installed into a --system-site-packages venv based on conda le312.
+# --no-deps is intentional: keep the existing LeRobot/PyTorch 2.10 stack.
+# This overrides Toolkit2's declared torch<=2.4 dependency; the ONNX path was
+# verified in this environment. Do not use its PyTorch importer in this venv.
+rknn-toolkit2==2.3.2
+onnx==1.16.1
+onnxruntime==1.20.1
+onnxsim==0.4.36
+numpy==1.26.4
+protobuf==4.25.4
+ruamel.yaml==0.18.10
+fast-histogram==0.14
